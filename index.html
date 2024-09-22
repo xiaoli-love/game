@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>小游戏</title>
+    <link rel="icon" href="./favicon.png">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha384-blOohCVdhjmtROpu8+CfTnUWham9nkX7P7OZQMst+RUnhtoY/9qemFAkIKOYxDI3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" integrity="sha384-XzmHBoD8PTvKAokH7D/g9gWW3qBDElSFJ47Wtqutc7kwlOJ8x85zkDm7HX4h03hg" crossorigin="anonymous">
+    <script src="https://s4.zstatic.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js" integrity="sha384-AwHbu/XtdPnbgl91oc/K6gC12qX60cGzjUW2tgIfU0zq+kQ0EE7ob0FR3gx41XRe" crossorigin="anonymous"></script>
+    <!-- <script async src="https://umami.xsl.life/script.js" data-website-id="c8574555-ec55-455b-8e11-3bc5cef1255c"></script> -->
+    <!-- <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "jazazditx4");
+</script> -->
+</head>
+<body>
+    <a href="./打地鼠/index.html"><div class="col-sm-3"><img src="./打地鼠/打地鼠.png" alt="打地鼠" height="300" width="350"></div></a>
+    <a href="./打砖块/inde.html"><div class="col-sm-3"><img src="./打砖块/打砖块.png" alt="打砖块" height="300" width="350"></div></a>
+    <a href="./切方块/index.html"><div class="col-sm-3"><img src="./切方块/切方块.png" alt="切方块" height="300" width="350"></div></a>
+    <a href="./石头布剪刀/index.html"><div class="col-sm-3"><img src="./石头布剪刀/石头布剪刀.png" alt="石头布剪刀" height="300" width="350"></div></a>
+    <div class="container">
+        <h4 class="text-center"><strong>健康游戏忠告：</strong>适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</h4>
+    </div>
+    <script>function welcomeFromA() {
+  if (document.referrer !== "") {  
+    const referrer = new URL(document.referrer),  
+    domain = referrer.hostname.split(".")[1];  
+    let text;  
+    if (location.hostname === referrer.hostname) {  
+        text = "欢迎阅读<span>「" + document.title.split(" - ")[0] + "」</span>";  
+    } else if (domain === "baidu") {  
+        text = "Hello！来自 百度搜索 的朋友<br>你是搜索 <span>" + referrer.search.split("&wd=")[1].split("&")[0] + "</span> 找到的我吗？";  
+    } else if (domain === "so") {  
+        text = "Hello！来自 360搜索 的朋友<br>你是搜索 <span>" + referrer.search.split("&q=")[1].split("&")[0] + "</span> 找到的我吗？";  
+    } else if (domain === "google") {  
+        text = "Hello！来自 谷歌搜索 的朋友<br>欢迎阅读<span>「" + document.title.split(" - ")[0] + "」</span>";  
+    } else {  
+        text = "Hello！来自 <span>" + referrer.hostname + "</span> 的朋友";  
+    }  
+      // 在此处显示弹窗  
+} else {  
+      // 在此处显示弹窗  
+}
+}
+window.onload = welcomeFromA;</script>
+<script>
+  iziToast.success({
+      title: '成功',
+      titleColor: '',
+      message: '已是最新 V1.0.0',
+      backgroundColor: '',
+      icon: 'fa-solid fa-check',
+      image: '',
+      imageWidth: 50,
+      maxWidth: 500,
+      position: 'topCenter',// bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter, center
+      timeout: 3000,
+      drag: true,// 拉动关闭
+      progressBarColor: 'blue',
+      overlay: false,
+  });
+  </script>
+    <audio src="./海愿.mp3" autoplay loop></audio>
+    <script src="https://unpkg.com/version-polling/dist/version-polling.min.js" integrity="sha384-HUGOI90Y4f3jixsKZdHhoMol/QjYp/SVFKBp0TUndCXVMqBAjcySzFHRHgqzxeJQ" crossorigin="anonymous"></script>
+    <script>
+      VersionPolling.createVersionPolling({
+        appETagKey: "__APP_ETAG__",
+        pollingInterval: 3 * 1000,
+        onUpdate: (self) => {
+          // 当检测到有新版本时，执行的回调函数，可以在这里提示用户刷新页面
+          const result = confirm("页面有更新，点击确定刷新页面！");
+          if (result) {
+            self.onRefresh();
+          } else {
+            self.onCancel();
+          }
+        },
+      });
+    </script>
+</body>
+</html>
